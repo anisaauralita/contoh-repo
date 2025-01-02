@@ -1,0 +1,2 @@
+# contoh-repo
+ repositori pertama
