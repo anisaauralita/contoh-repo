@@ -1,0 +1,43 @@
+site_name: Panduan Aplikasi manajemen pegawai
+
+# tema
+theme:
+  name: material
+
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: pink
+      accent: pink
+      toggle:
+        icon: material/toggle-switch 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: pink
+      accent: pink
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+# ikon notifikasi
+  icon:
+    admonition:
+      note: fontawesome/solid/note-sticky
+      abstract: fontawesome/solid/book
+      info: fontawesome/solid/circle-info
+      tip: fontawesome/solid/bullhorn
+      success: fontawesome/solid/check
+      question: fontawesome/solid/circle-question
+      warning: fontawesome/solid/triangle-exclamation
+      failure: fontawesome/solid/bomb
+      danger: fontawesome/solid/skull
+      bug: fontawesome/solid/robot
+      example: fontawesome/solid/flask
+      quote: fontawesome/solid/quote-left
+
+# ekstensi
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
