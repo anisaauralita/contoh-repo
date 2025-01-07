@@ -1,26 +1,35 @@
-site_name: Panduan Aplikasi manajemen pegawai
-
-# tema
+site_name: Panduan Aplikasi Manajemen Pegawai
+# site_url: https://mydomain.org/mysite
 theme:
   name: material
-
   palette:
+
     # Palette toggle for light mode
     - scheme: default
-      primary: pink
-      accent: pink
+      primary: green
+      accent: green
       toggle:
-        icon: material/toggle-switch 
+        icon: material/lightbulb
         name: Switch to dark mode
 
     # Palette toggle for dark mode
     - scheme: slate
-      primary: pink
-      accent: pink
+      primary: green
+      accent: green
       toggle:
-        icon: material/toggle-switch-off-outline
+        icon: material/lightbulb-outline
         name: Switch to light mode
-# ikon notifikasi
+  
+  # Mengatur font
+  font:
+    text: Open Sans
+    code: JetBrains Mono
+
+  # icon:
+    # logo: material/book
+  favicon: images/open-book.png
+  logo: images/open-book.png
+
   icon:
     admonition:
       note: fontawesome/solid/note-sticky
@@ -36,8 +45,31 @@ theme:
       example: fontawesome/solid/flask
       quote: fontawesome/solid/quote-left
 
-# ekstensi
+  features:
+    # - navigation.footer
+    # - navigation.tabs
+  
+
+plugins:
+  - search
+
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  # Fitur
+  - attr_list
+
+
+# Footer
+copyright: Made with ❤️ by Masipnu | &copy; 2025
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/masipnu
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/masipnu
+    - icon: fontawesome/brands/linkedin
+      link: https://id.linkedin.com/in/ipnu-masyaid-8a6629177
