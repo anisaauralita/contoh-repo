@@ -598,7 +598,19 @@
 
 <h1 id="pengembangan-lanjutan">Pengembangan Lanjutan</h1>
 <h2 id="menambahkan-fitur-baru">Menambahkan Fitur Baru</h2>
+<ol>
+<li>Buat migrasi database baru untuk tabel yang dibutuhkan:
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>make:migration
+</code></pre></div></li>
+<li>Tambahkan logika di controller dan route sesuai kebutuhan fitur baru.</li>
+</ol>
 <h2 id="pembaharuan-versi">Pembaharuan Versi</h2>
+<ol>
+<li>Tarik pembaruan dari repositori utama dengan perintah berikut:
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div></li>
+<li>Jalankan migrasi ulang jika ada perubahan database.</li>
+</ol>
 
 
 
