@@ -372,6 +372,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#instalasi-aplikasi-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalasi Aplikasi Server
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mengunduh-aplikasi" class="md-nav__link">
     <span class="md-ellipsis">
       Mengunduh Aplikasi
@@ -573,6 +582,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#instalasi-aplikasi-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalasi Aplikasi Server
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mengunduh-aplikasi" class="md-nav__link">
     <span class="md-ellipsis">
       Mengunduh Aplikasi
@@ -615,46 +633,61 @@
 
 
 <h1 id="instalasi">Instalasi</h1>
+<h2 id="instalasi-aplikasi-server">Instalasi Aplikasi Server</h2>
+<p>Seperti yang disinggung sebelumnya, untuk mempermudah proses instalasi kita akan menggunakan aplikasi server Laragon. Ikuti langkah-langkah berikut.</p>
+<ol>
+<li>Kunjungi halaman resmi Laragon pada <a href="https://laragon.org/download/">Link Berikut</a></li>
+<li>Pada bagian <strong>Edition</strong>, Klik <strong>Download Laragon - Full (173 MB)</strong> untuk mengunduh aplikasi laragon.</li>
+<li>Setelah proses download selesai, double klik pada file <strong>laragon-wamp.exe</strong> untuk melakukan instalasi.</li>
+<li>Klik <strong>Next</strong> dan <strong>Install</strong> sampai selesai, lalu klik <strong>Finish</strong>.</li>
+<li>Pada jendela aplikasi laragon yang terbuka, klik <strong>Start All</strong> untuk menjalankan server web dan database.</li>
+<li>Cukup klik tanda <span class="keys"><kbd class="key-x">X</kbd></span> untuk me-minimize aplikasi laragon.</li>
+</ol>
 <h2 id="mengunduh-aplikasi">Mengunduh Aplikasi</h2>
 <p>Untuk Mengunduh aplikasi ini lakukan langkah-langkah berikut:</p>
 <ol>
-<li>Kunjungi halaman repositori aplikasi di [GitHub/URL lainnya].</li>
-<li>Unduh kode sumber dalam format ZIP atau kloning repositori menggunakan perintah berikut:
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/username/repository.git
-</code></pre></div></li>
-<li>Ekstrak file ZIP (jika diunduh dalam format ZIP) ke direktori server Anda.</li>
+<li>Kunjungi halaman release aplikasi pada <a href="https://github.com/masipnu/apg/releases/tag/v1.0">link berikut</a></li>
+<li>Unduh kode sumber dalam format ZIP dengan klik <code>Source code (zip)</code> pada bagian Assets.</li>
+<li>Anda akan mendapatkan file <code>apg-1.0.zip</code>.</li>
+<li>Ekstrak file tersebut pada direktori <code>C:\laragon\www</code>.</li>
+<li>Anda akan mendapati direktori <code>apg-01</code>, silahkan rename menjadi <code>apg</code>.</li>
 </ol>
 <h2 id="instalasi-database">Instalasi Database</h2>
+<p>Karena aplikasi ini bekerja menggunakan database maka kita perlu mengatur databasemya terlebih dahulu sebelum dijalankan.</p>
 <ol>
-<li>Buka MySQL atau MariaDB menggunakan terminal:
-<div class="highlight"><pre><span></span><code><span class="n">mysql</span><span class="w"> </span><span class="o">-</span><span class="n">u</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">-</span><span class="n">p</span>
-</code></pre></div></li>
-<li>Buat database baru untuk aplikasi:
-<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">manajemen_pegawai</span><span class="p">;</span>
-</code></pre></div></li>
-<li>Impor file database bawaan yang terletak di folder <code>database</code>:
-<div class="highlight"><pre><span></span><code><span class="n">mysql</span><span class="w"> </span><span class="o">-</span><span class="n">u</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="n">manajemen_pegawai</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">database</span><span class="p">.</span><span class="k">sql</span>
-</code></pre></div></li>
+<li>Buka aplikasi laragon.
+   <img alt="laragon" src="../images/laragon.png" /></li>
+<li>Klik <code>Database</code> untuk membuka aplikasi menajemen database Heidi SQL.
+   <img alt="heidi-login" src="../images/heidi-login.png" /></li>
+<li>Biarkan bagian password (kosong), lalu klik <strong>Open</strong>.
+   <img alt="heidi" src="../images/heidi.png" /></li>
+<li>Saat jendela heidi sql terbuka, Klik menu <code>File</code> &gt; <code>Run SQL file</code>, lalu arahkan ke file <code>apg.sql</code> yang berada di direktori <code>C:\laragon\www\apg\database</code> dan klik <strong>Open</strong>. jika ada peringatan, klik <strong>Yes</strong></li>
+<li>Selama tidak ada pesan <code>Error</code>, berarti database sudah tersedia.</li>
+<li>Tekan tombol <span class="keys"><kbd class="key-f5">F5</kbd></span> pada jendela Heidi SQL untuk me-refresh database, maka anda akan menemukan database <code>apg</code> lengkap dengan struktur tabel beserta contoh datanya.</li>
+<li>Sekarang anda bisa menutup aplikasi Heidi SQL dan me-minimaze Laragon.</li>
 </ol>
 <h2 id="konfigurasi-aplikasi">Konfigurasi Aplikasi</h2>
+<p>Setelah mengatur database, kita perlu melakukan konfigurasi database pada aplikasi APG.
+Ikuti langkah-langkah beriut.</p>
 <ol>
-<li>Salin file <code>.env.example</code> menjadi <code>.env</code>:
-<div class="highlight"><pre><span></span><code><span class="n">cp</span><span class="w"> </span><span class="p">.</span><span class="n">env</span><span class="p">.</span><span class="n">example</span><span class="w"> </span><span class="p">.</span><span class="n">env</span>
+<li>Buka file <code>config.php</code> pada direktori <code>C:\laragon\www\apg\library</code> dengan teks editor.
+   Bisa Visual studio code atau Notepad.</li>
+<li>Atur Konfigurasi user dan password database pada baris berikut.
+    <div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nv">$host</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span><span class="p">;</span>
+<span class="nv">$user</span> <span class="o">=</span> <span class="s2">&quot;root&quot;</span><span class="p">;</span>
+<span class="nv">$pass</span> <span class="o">=</span> <span class="s2">&quot;root&quot;</span><span class="p">;</span>
+<span class="nv">$db</span> <span class="o">=</span> <span class="s2">&quot;apg&quot;</span><span class="p">;</span>
+
+<span class="nv">$con</span> <span class="o">=</span> <span class="nb">mysqli_connect</span><span class="p">(</span><span class="nv">$host</span><span class="p">,</span> <span class="nv">$user</span><span class="p">,</span> <span class="nv">$pass</span><span class="p">,</span> <span class="nv">$db</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nx">mysqli_connect_errno</span><span class="p">())</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">&quot;Koneksi gagal! : &quot;</span> <span class="o">.</span> <span class="nx">mysqli_connect_error</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
 </code></pre></div></li>
-<li>Atur konfigurasi database di file <code>.env</code> sesuai dengan detail server Anda:
-<div class="highlight"><pre><span></span><code><span class="n">DB_DATABASE</span><span class="o">=</span><span class="n">manajemen_pegawai</span>
-<span class="n">DB_USERNAME</span><span class="o">=</span><span class="n">root</span>
-<span class="n">DB_PASSWORD</span><span class="o">=</span><span class="n">yourpassword</span>
-</code></pre></div></li>
-<li>Instal dependensi aplikasi menggunakan Composer:
-<div class="highlight"><pre><span></span><code><span class="n">composer</span><span class="w"> </span><span class="n">install</span>
-</code></pre></div></li>
-<li>Jalankan migrasi database (jika diperlukan):
-<div class="highlight"><pre><span></span><code><span class="n">php</span><span class="w"> </span><span class="n">artisan</span><span class="w"> </span><span class="n">migrate</span>
-</code></pre></div></li>
-<li>Jalankan aplikasi:
-<div class="highlight"><pre><span></span><code><span class="n">php</span><span class="w"> </span><span class="n">artisan</span><span class="w"> </span><span class="n">serve</span>
-</code></pre></div></li>
+<li>Karena pada user root tidak perlu memakai password, maka saya rubah <code>$user = "root";</code> menjadi <code>$user = "";</code>.</li>
+<li>Cukup ini saja dan Aplikasi Manajemen Pegawai siap dijalankan.</li>
 </ol>
 
 
